@@ -1,0 +1,154 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #333;
+  --bar-color: #3498db;
+  --compare-color: #f39c12;
+  --swap-color: #e74c3c;
+  --sorted-color: #2ecc71;
+  --panel-bg: #f2f2f2;
+}
+
+body.dark {
+  --bg-color: #1e1e1e;
+  --text-color: #f0f0f0;
+  --bar-color: #3498db;
+  --compare-color: #f39c12;
+  --swap-color: #e74c3c;
+  --sorted-color: #2ecc71;
+  --panel-bg: #2a2a2a;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  transition: background 0.3s, color 0.3s;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: var(--panel-bg);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  margin: 0;
+}
+
+#themeToggle {
+  font-size: 1.2rem;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+
+.controls input[type="text"], 
+.controls input[type="number"], 
+select {
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  background: var(--bar-color);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: var(--compare-color);
+}
+
+#visualizationWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1.5rem;
+  overflow-x: auto;
+}
+
+#visualizationArea {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 400px;
+  gap: 3px;
+}
+
+.bar {
+  background: var(--bar-color);
+  width: 15px;
+  border-radius: 3px;
+  transition: height 0.2s, background 0.2s;
+}
+
+#arrayValues {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8px;
+  flex-wrap: nowrap;
+  gap: 3px;
+}
+
+.value {
+  width: 15px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-color);
+}
+
+#legend {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.color-sample {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+}
+
+#algoInfo {
+  margin: 1rem auto;
+  max-width: 600px;
+  background: var(--panel-bg);
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: var(--panel-bg);
+}

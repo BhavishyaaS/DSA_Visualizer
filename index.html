@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DSA Visualizer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>DSA Visualizer</h1>
+    <button id="themeToggle">🌙</button>
+  </header>
+
+  <section class="controls">
+    <label>Speed:
+      <input type="range" id="speedSlider" min="50" max="1000" value="300" />
+    </label>
+
+    <label>Array Size:
+      <input type="range" id="sizeSlider" min="5" max="100" value="25" />
+    </label>
+
+    <button id="generateBtn">Generate Random Array</button>
+
+    <input type="text" id="arrayInput" placeholder="Enter numbers e.g. 5,3,8,2,9" />
+    <button id="useInputBtn">Use My Array</button>
+
+    <select id="algorithmSelect">
+      <option value="bubble">Bubble Sort</option>
+      <option value="selection">Selection Sort</option>
+      <option value="insertion">Insertion Sort</option>
+      <option value="merge">Merge Sort</option>
+      <option value="quick">Quick Sort</option>
+      <option disabled>────────────</option>
+      <option value="linear">Linear Search</option>
+      <option value="binary">Binary Search</option>
+    </select>
+
+    <input type="number" id="searchValue" placeholder="Search target" />
+    <button id="startBtn">Start</button>
+  </section>
+
+  <section id="algoInfo">
+    <h2>Algorithm Details</h2>
+    <p><strong>Name:</strong> <span id="algoName">Bubble Sort</span></p>
+    <p><strong>Time Complexity:</strong> <span id="algoTime">O(n²)</span></p>
+    <p><strong>Space Complexity:</strong> <span id="algoSpace">O(1)</span></p>
+    <p><strong>Description:</strong> <span id="algoDesc">
+      Repeatedly swaps adjacent elements if they are in the wrong order.
+    </span></p>
+  </section>
+
+  <section id="legend">
+    <div class="legend-item"><span class="color-sample" style="background: var(--bar-color);"></span>Unsorted</div>
+    <div class="legend-item"><span class="color-sample" style="background: var(--compare-color);"></span>Comparing</div>
+    <div class="legend-item"><span class="color-sample" style="background: var(--swap-color);"></span>Swapped</div>
+    <div class="legend-item"><span class="color-sample" style="background: var(--sorted-color);"></span>Sorted</div>
+  </section>
+
+  <section id="visualizationWrapper">
+    <div id="visualizationArea"></div>
+    <div id="arrayValues"></div>
+  </section>
+
+  <footer>
+    <p>DSA Visualizer</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
